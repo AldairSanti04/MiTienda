@@ -70,7 +70,7 @@ class Carrito {
         });
 
         if(productosLS === infoProducto.id){
-            alert("El producto ya se encuentra en su carrito");
+            Swal("El producto ya se encuentra en su carrito");
         }
         else {
             this.insertarCarrito(infoProducto);
@@ -187,7 +187,7 @@ class Carrito {
         event.preventDefault();
 
         if(this.obtenerProductosLS().length === 0){
-            alert('Su Carrito está Vacío')
+            Swal('Su Carrito está Vacío')
         }
         else {
             location.href = "./pages/checkout.html";
